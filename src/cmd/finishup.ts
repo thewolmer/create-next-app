@@ -3,6 +3,7 @@ import { editorConfig } from "../configs/editor-config";
 import { nextJsConfig } from "../configs/next-config";
 import { nextSiteMapConfig } from "../configs/next-sitemap-config";
 import { errorTsx } from "../templates/error-tsx";
+import { exampleApiTs } from "../templates/example-api-ts";
 import { fontsComponent } from "../templates/fonts-component";
 import { generateSeoUtil } from "../templates/generate-seo-util";
 import { googleAnalyticsUtil } from "../templates/google-analytics-util";
@@ -34,6 +35,7 @@ export const Finishup = async (projectName: string, isSrc: boolean) => {
   writeFileContent(`${project}/app/[...not_found]/page.tsx`, notFoundCatchAll);
   writeFileContent(`${project}/app/not-found.tsx`, notFoundTsx);
   writeFileContent(`${project}/app/error.tsx`, errorTsx);
+  writeFileContent(`${project}/app/api/route.ts`, exampleApiTs);
   //--------------------------------------------//
   writeFileContent(`${project}/config/index.ts`, siteConfig);
   writeFileContent(`${project}/types/index.d.ts`, siteConfigTypes);
