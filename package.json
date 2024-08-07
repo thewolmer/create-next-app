@@ -1,28 +1,55 @@
 {
-	"name": "@wolmer/create-next-app",
-	"version": "0.0.1",
-	"main": "src/index.ts",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"build": "tsc",
-		"dev": "node dist/index.js",
-		"clean": "rm -rf dist"
-	},
-	"author": "thewolmer",
-	"license": "MIT",
-	"files": [
-		"src"
-	],
-	"description": "",
-	"packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e",
-	"dependencies": {
-		"@clack/prompts": "^0.7.0",
-		"execa": "^9.3.0"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "1.8.3",
-		"typescript": "^5.5.4",
-		"@types/node": "^22.1.0",
-		"tsup": "^8.2.4"
-	}
+  "name": "@wolmer/create-next-app",
+  "description": "Bootstrap Next.js + Tailwind CSS + ShadcnUI Project in Seconds",
+  "version": "0.0.2",
+  "main": "src/index.ts",
+  "bin": {
+    "create-next-app": "./dist/index.js"
+  },
+  "homepage": "https://github.com/thewolmer/create-next-app",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "dev": "node dist/index.js",
+    "clean": "rm -rf dist",
+    "commit": "git-cz",
+    "release": "commit-and-tag-version",
+    "push": "git push --follow-tags origin main",
+    "lint": "biome lint ."
+  },
+  "author": "@thewolmer",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e",
+  "dependencies": {
+    "@clack/prompts": "^0.7.0",
+    "execa": "^9.3.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.8.3",
+    "@types/node": "^22.1.0",
+    "commit-and-tag-version": "^12.4.1",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "tsup": "^8.2.4",
+    "typescript": "^5.5.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thewolmer/create-next-app.git"
+  },
+  "keywords": [
+    "next.js",
+    "tailwindcss",
+    "shadcnui",
+    "typescript",
+    "react",
+    "typescript",
+    "create-next-app",
+    "nextjs",
+    "tailwind",
+    "shadcn"
+  ]
 }
