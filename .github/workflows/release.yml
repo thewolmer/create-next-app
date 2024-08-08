@@ -20,7 +20,7 @@ jobs:
           registry-url: "https://registry.npmjs.org"
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Build
         run: npm run build
@@ -30,9 +30,9 @@ jobs:
         with:
           files: dist/*
           token: ${{ secrets.GITHUB_TOKEN }}
-          tag: ${{ github.ref }}
-          title: ${{ github.ref }}
-          body: ${{ github.event.release.body }}
+          tag_name: ${{ github.ref_name }}
+          name: Release ${{ github.ref_name }}
+          body: "Release notes for ${{ github.ref_name }}"
 
       - name: Publish to npm
         env:
