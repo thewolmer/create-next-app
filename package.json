@@ -2,7 +2,7 @@
   "name": "@wolmer/create-next-app",
   "description": "Bootstrap Next.js + Tailwind CSS + ShadcnUI Project in Seconds",
   "homepage": "https://github.com/thewolmer/create-next-app",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "./dist/index.js",
   "bin": {
     "create-next-app": "./dist/index.js"
