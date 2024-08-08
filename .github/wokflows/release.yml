@@ -1,8 +1,7 @@
 name: Publish Release
 
 on:
-  release:
-    types: [published]
+  push:
     tags:
       - "v*"
 
@@ -26,11 +25,6 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Publish to npm
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npm publish --access public
-
       - name: Create GitHub release
         uses: softprops/action-gh-release@v1
         with:
@@ -39,3 +33,8 @@ jobs:
           tag: ${{ github.ref }}
           title: ${{ github.ref }}
           body: ${{ github.event.release.body }}
+
+      - name: Publish to npm
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npm publish --access public
