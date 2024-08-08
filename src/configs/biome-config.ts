@@ -1,5 +1,4 @@
-export const biomeConfig = `{
-	"$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+export const biomeConfig = `{"$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
 	"files": {
 		"maxSize": 1572864
 	},

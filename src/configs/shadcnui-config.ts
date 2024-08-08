@@ -1,5 +1,4 @@
-export const shadCnUiConfig = `
-{
+export const shadCnUiConfig = `{
   "$schema": "https://ui.shadcn.com/schema.json",
   "style": "new-york",
   "rsc": true,

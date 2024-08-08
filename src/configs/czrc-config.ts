@@ -1,4 +1,3 @@
-export const czrcConfig = `
-{
+export const czrcConfig = `{
   "path": "cz-conventional-changelog"
 }`;

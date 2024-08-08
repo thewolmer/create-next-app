@@ -1,5 +1,4 @@
-export const editorConfig = `
-# https://editorconfig.org
+export const editorConfig = `# https://editorconfig.org
 root = true
 
 [*]
