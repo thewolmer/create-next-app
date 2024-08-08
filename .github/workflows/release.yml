@@ -25,14 +25,18 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: ZIP archive of the dist directory
+        run: |
+          zip -r dist.zip dist
+
       - name: Create GitHub release
         uses: softprops/action-gh-release@v1
         with:
-          files: dist/**
+          files: dist.zip
           token: ${{ secrets.GITHUB_TOKEN }}
           tag_name: ${{ github.ref_name }}
-          name: Release ${{ github.ref_name }}
-          body: "Release notes for ${{ github.ref_name }}"
+          name: ${{ github.ref_name }}
+          body_path: CHANGELOG.md
 
       - name: Publish to npm
         env:
