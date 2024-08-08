@@ -2,7 +2,7 @@
   "name": "@wolmer/create-next-app",
   "description": "Bootstrap Next.js + Tailwind CSS + ShadcnUI Project in Seconds",
   "homepage": "https://github.com/thewolmer/create-next-app",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "./dist/index.js",
   "bin": {
     "create-next-app": "./dist/index.js"
@@ -19,7 +19,11 @@
   },
   "author": "@thewolmer",
   "license": "MIT",
-  "files": ["dist", "README.md", "CHANGELOG.md"],
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md"
+  ],
   "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e",
   "dependencies": {
     "@clack/prompts": "^0.7.0"
