@@ -13,7 +13,7 @@ import { prettierConfig } from "./configs/prettier-config";
 import { getCommand, run, task, writeFileContent } from "./utils";
 async function main() {
   console.clear();
-  intro(color.bold(color.underline(color.blue("🚀 create-next-app by wolmer"))));
+  intro(color.bold(color.underline(color.cyan("🚀 create-next-app by wolmer"))));
 
   const p = await group(
     {
@@ -136,7 +136,7 @@ async function main() {
   if (runDev) {
     execSync(`${p.packageManager} run dev`, { cwd: p.projectName, stdio: "inherit" });
   } else {
-    note(`Next Steps: ${color.green(`${p.projectName} && ${p.packageManager} run dev`)}`);
+    note(`Next Steps: ${color.green(`cd ${p.projectName} && ${p.packageManager} run dev`)}`);
   }
 
   outro("Done, Happy Coding!");
