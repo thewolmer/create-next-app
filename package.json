@@ -1,12 +1,12 @@
 {
   "name": "@wolmer/create-next-app",
   "description": "Bootstrap Next.js + Tailwind CSS + ShadcnUI Project in Seconds",
+  "homepage": "https://github.com/thewolmer/create-next-app",
   "version": "0.0.2",
-  "main": "src/index.ts",
+  "main": "./dist/index.js",
   "bin": {
     "create-next-app": "./dist/index.js"
   },
-  "homepage": "https://github.com/thewolmer/create-next-app",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
@@ -19,13 +19,10 @@
   },
   "author": "@thewolmer",
   "license": "MIT",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist, README.md"],
   "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e",
   "dependencies": {
-    "@clack/prompts": "^0.7.0",
-    "execa": "^9.3.0"
+    "@clack/prompts": "^0.7.0"
   },
   "devDependencies": {
     "@biomejs/biome": "1.8.3",
@@ -33,7 +30,6 @@
     "commit-and-tag-version": "^12.4.1",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
-    "tsup": "^8.2.4",
     "typescript": "^5.5.4"
   },
   "repository": {
