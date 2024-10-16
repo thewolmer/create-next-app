@@ -100,10 +100,12 @@ async function main() {
       { cwd: p.projectName as string },
     );
     await shadCnSetup(p.projectName as string, p.addSrc as boolean);
-    await run(
-      `${getCommand(p.packageManager as string, { executable: true })} shadcn-ui@latest add button card -y`,
-      { cwd: p.projectName as string },
-    );
+    // TODO: New version of shadcn-ui broke this command, need to fix it
+
+    // await run(
+    //   `${getCommand(p.packageManager as string, { executable: true })} shadcn-ui@latest add button card -y`,
+    //   { cwd: p.projectName as string },
+    // );
     s.stop("Shadcn/ui config done.");
   });
 
