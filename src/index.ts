@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import { execSync } from "node:child_process";
+import fs from "node:fs";
 import { cancel, confirm, group, intro, note, outro, select, text } from "@clack/prompts";
 import color from "picocolors";
 import { Finishup } from "./cmd/finishup";
@@ -21,10 +22,14 @@ async function main() {
         text({
           message: "Enter project name:",
           validate(value) {
-            // biome-ignore lint/style/useBlockStatements: <explanation>
-            if (value.length === 0) return "Project name is required!";
+            if (value.length === 0) {
+              return "Project name is required!";
+            }
             if (value.includes(" ")) {
               return "Spaces are not allowed. Please use dashes (-) instead.";
+            }
+            if (fs.existsSync(value)) {
+              return "A file or folder with the same name already exists.";
             }
           },
         }),
