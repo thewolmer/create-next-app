@@ -67,7 +67,7 @@ async function main() {
     },
   );
 
-  const createCommand = `create-next-app@latest ${p.projectName as string} --ts --app --no-eslint --use-${p.packageManager as string} --tailwind ${p.addSrc ? "--src-dir" : "--no-src-dir"} --no-import-alias`;
+  const createCommand = `create-next-app@15.0.1 ${p.projectName as string} --ts --app --no-eslint --use-${p.packageManager as string} --no-turbopack --tailwind ${p.addSrc ? "--src-dir" : "--no-src-dir"} --no-import-alias`;
 
   await task("Initializing Next.js + Tailwind Project...", async (s) => {
     await run(`${getCommand(p.packageManager as string, { executable: true })} ${createCommand}`);
