@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.6](https://github.com/thewolmer/create-next-app/compare/v0.0.5...v0.0.6) (2024-10-29)
+
 ## [0.0.5](https://github.com/thewolmer/create-next-app/compare/v0.0.4...v0.0.5) (2024-10-16)
 
 
